@@ -12,9 +12,12 @@ namespace StackAndQueue
             //linkedListStack.Display();
             //linkedListStack.IsEmpty();
             LinkedListQueue linkedListQueue = new LinkedListQueue();
-            linkedListQueue.Enqueue(56);
-            linkedListQueue.Enqueue(30);
-            linkedListQueue.Enqueue(70);
+            Console.WriteLine("Please enter: 1 if you want to add element into the dequeue from the front, and 2 if you want to add element from the back");
+            string input = Console.ReadLine();
+            int choice = Convert.ToInt32(input);
+            linkedListQueue.Enqueue(56, choice);
+            linkedListQueue.Enqueue(30, choice);
+            linkedListQueue.Enqueue(70, choice);
             linkedListQueue.Display();
             Console.ReadKey();
         }
